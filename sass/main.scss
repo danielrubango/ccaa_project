@@ -1,0 +1,174 @@
+html, body{}
+
+body{
+	margin: 0; padding: 0; font-family: 'Actor', roboto;
+}
+
+.page__header, .page__content, .page__footer{
+
+	// display:flex;
+	// justify-content:center;
+
+}
+
+.container{
+	margin:auto;
+	max-width: 960px;
+}
+
+
+.page__header{
+
+	background-color: rgba(#ccc, 0.2);
+	background-image: url("../img/symphony.png");
+
+}
+
+.nav-bar__brand{
+	color: #757575;
+
+	line-height: 150px;
+	font-family: 'Playball';
+	text-align: center;
+	font-size: 48px;
+}
+
+
+.nav-bar{
+
+	width:100%;
+
+	& .menu__container, & .nav__item{
+		margin:0; padding:0;
+	}
+
+	.menu__container{
+
+		height:50px;
+
+		display: flex;
+		justify-content:center;
+
+		max-width: 640px;
+		margin:auto;
+
+	}
+
+	.nav__item{
+
+		font-size: 18px;
+
+		list-style-type: none;
+		// flex:1;
+		justify-content:center;
+		text-align: center;
+
+
+		a{
+			color: #757575;
+
+			display:block;
+			padding:0 28px;
+			line-height: 50px;
+			text-decoration: none;
+
+		}
+
+		&:hover, &:visited, &:focus{
+			background-color: rgba(#795548, 0.2);
+			// border-bottom: solid #795548 3px;
+		}
+
+		&.active{
+			a{
+				color: #333;
+				font-weight: bold;
+			}
+
+			// background-color: rgba(#795548, 0.4);
+			border-bottom: solid #795548 3px;
+		}
+
+	}
+
+}
+
+.menu{
+	background-color: rgba(#795548, 0.1);
+}
+
+
+
+.page__content .container{
+	display:flex;
+	padding: 75px 0;
+}
+
+
+.article{
+	flex:3;
+
+	// background-color: red;
+	padding:0 20px 0 0;
+
+}
+
+
+h2.page__title{
+	text-transform: uppercase;
+	margin: 0;
+	padding: 15px 20px;
+	border-left: solid 5px #795548;
+}
+
+.post{
+	margin:20px 0; padding: 20px 20px;
+	// border:solid red 1px;
+
+	box-shadow: 1px 1px 10px 1px #ccc;
+}
+
+
+
+.home__sidebar--content{
+	flex:1;
+}
+
+.sidebar{
+	background-color: rgba(#795548, 0.2);
+	padding:1px 20px 1px 20px;
+
+	margin-bottom: 20px;
+
+	font-size: 14px;
+
+
+h3 {
+	font-family: Cookie;
+}
+}
+
+
+.page__footer{
+
+	text-align: center;
+
+	&--link, &--copyright{
+		// line-height: 100px;
+	}
+
+	&--link{
+		background-color: rgba(45, 21, 12, 0.75);
+		height:100px;
+		line-height: 100px;
+	}
+
+	&--copyright{
+		height:50px;
+		line-height: 50px;
+		background-color: rgba(45, 21, 12, 9);
+	}
+
+
+
+}
