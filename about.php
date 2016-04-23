@@ -1,4 +1,4 @@
-<?php $page="home"; ?>
+<?php $page="about"; ?>
 
 <!DOCTYPE html>
 <html>
@@ -35,7 +35,7 @@
 				
 				<!-- Insertion de la sidebar qui revient sur toutes les pages en quelques sortes -->
 				<?php require("./includes/sidebar.php"); ?>
-
+				
 			</div>
 		</section>
 
