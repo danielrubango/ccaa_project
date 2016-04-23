@@ -31,12 +31,12 @@
 
 		<!-- <section class="carrousel">
 			<div>
-				<div calss="item1">Item 1</div>
-				<div calss="item2">Item 2</div>
-				<div calss="item3">Item 3</div>
+				<div class="item1">Item 1</div>
+				<div class="item2">Item 2</div>
+				<div class="item3">Item 3</div>
 			</div>
 			<div>
-
+				<div class="#"></div>
 			</div>
 		</section> -->
 
