@@ -7,14 +7,6 @@
 		"contact" => "CONTACT US"
 	];
 
-	function getMenu()
-	{
-		global $pages;
-		foreach ($pages as $page => $legend) {
-			
-		}
-	}
-
 	function putAtive($page, $p = "home")
 	{
 		if ( $page == $p ) {
@@ -34,6 +26,6 @@
 				</a>
 			</li>
 		<?php endforeach; ?>
-		
+
 	</ul>
 </div>
