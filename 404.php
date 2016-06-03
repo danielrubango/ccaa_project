@@ -1,10 +1,8 @@
 <!-- Imports tete de page -->
 <?php
-	$page_legend="about";
-	$page_title="About Us";
+	$page_legend="services";
+	$page_title="Services";
 	$page_description="Services";
-
-	$page_h2_title		= "Qui sommes nous";
 
 	require("./includes/layouts/top.php");
 ?>
