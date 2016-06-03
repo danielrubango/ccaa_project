@@ -7,6 +7,6 @@
 		</div>
 	</div>
 	<div class="page__footer--copyright">
-		<div class="cont,ainer">Tout droits reserves</div>
+		<div class="container">Tout droits reserves</div>
 	</div>
 </footer>
