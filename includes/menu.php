@@ -20,7 +20,7 @@
 	<ul class="menu__container">
 
 		<?php foreach ($pages as $p => $legend): $_p = ( $p == "home" ) ? "/" : "$p.php" ; ?>
-			<li class="nav__item <?php putAtive($page, $p); ?>">
+			<li class="nav__item <?php putAtive($page_legend, $p); ?>">
 				<a href="<?= $_p; ?>">
 					<?= $legend; ?>
 				</a>
