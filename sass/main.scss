@@ -1,7 +1,83 @@
+// Variables
+$menu_line_heigh:75px;
+//
+//
+
+@font-face {
+    font-family: 'icons'; /*a name to be used later*/
+    src: url('./fonts/icons.ttf'); /*URL to font*/
+}
+
 html, body{}
 
 body{
 	margin: 0; padding: 0; font-family: 'Actor', roboto;
+}
+
+.follow_us{
+
+	text-align: right;
+	
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	background-color: rgb(60, 60, 60);
+	color: white;
+
+	ul {
+		margin: 0; padding: 0;
+		display:inline-block;
+
+		padding-right: 40px;
+		line-height: 40px;
+	}
+
+	li {
+		margin: 0;
+		display: inline-block;
+		list-style-type: none;
+		padding: 0 5px;
+
+		cursor: default;
+		-webkit-user-select: none;  /* Chrome all / Safari all */
+		-moz-user-select: none;     /* Firefox all */
+		-ms-user-select: none;      /* IE 10+ */
+		user-select: none;          /* Likely future */
+
+		a{
+			color:inherit;
+			text-decoration: none;
+			// text-transform: uppercase;
+			display:inline-block;
+			font-weight: bold;
+			line-height: 40px;
+	
+			cursor: pointer;
+
+			&:hover, &:focus{
+				text-decoration: none;
+			}
+
+		}
+
+	}
+
+	.icon{
+		font-size: 18px;
+		font-family: icons;
+		transition: all 0.3s;
+	}
+
+	.facebook:hover{
+		color: #055FD9;
+		text-shadow: 1px 0 0 #fff, 1px 0 0 #fff, 0 1px 0 #fff, 0 1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	}
+
+	.twitter:hover{
+		color: #2B9BE3;
+		text-shadow: 1px 0 0 #fff, 1px 0 0 #fff, 0 1px 0 #fff, 0 1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	}
+
 }
 
 .page__header, .page__content, .page__footer{
@@ -19,9 +95,24 @@ body{
 
 .page__header{
 
+	position: relative;
 	background-color: rgba(#ccc, 0.2);
-	background-image: url("../img/symphony.png");
 
+}
+
+.page__header_img{
+
+	position: absolute;
+	top: 0;left: 0;right: 0;bottom: 0;
+
+	background-image: url("../img/symphony.png");
+	opacity: 0.5;
+	z-index: 1;
+
+}
+
+.page__header_content{
+	z-index: 20;
 }
 
 .nav-bar__brand{
@@ -30,7 +121,29 @@ body{
 	line-height: 150px;
 	font-family: 'Playball';
 	text-align: center;
-	font-size: 48px;
+	font-size: 72px;
+
+	& .__ccaa, & .__rdc { font-family: roboto, sans-serif; }
+
+	& .__ccaa {
+		display:inline-block;
+		line-height: 72px;
+		font-weight: 700;
+	}
+
+
+	& .__rdc {
+		font-weight: 100;
+	}
+
+}
+
+.top__serparator{
+	display:inline-block;
+	width:10px;
+	line-height: 72px;
+	margin-left: 10px;
+	border-left: 2px solid #757575;
 }
 
 
@@ -44,7 +157,7 @@ body{
 
 	.menu__container{
 
-		height:50px;
+		height: $menu_line_heigh;
 
 		display: flex;
 		justify-content:center;
@@ -56,32 +169,36 @@ body{
 
 	.nav__item{
 
-		font-size: 18px;
+		font-size: 20px;
 
 		list-style-type: none;
 		// flex:1;
 		justify-content:center;
 		text-align: center;
 
+		transition: 0.3s border-width;
 
 		a{
-			color: #757575;
+			color: #777;
 
 			display:block;
 			padding:0 28px;
-			line-height: 50px;
+			line-height: $menu_line_heigh;
 			text-decoration: none;
+
 
 		}
 
 		&:hover, &:visited, &:focus{
-			background-color: rgba(#795548, 0.2);
-			// border-bottom: solid #795548 3px;
+			a{color: #333;}
+			// background-color: rgba(#795548, 0.2);
+			border-bottom: solid rgba(121, 85, 72, 0.76) 75px;
 		}
 
 		&.active{
 			a{
-				color: #333;
+				background-color: #795548;
+				color: #fff;
 				font-weight: bold;
 			}
 
@@ -117,14 +234,18 @@ body{
 h2.page__title{
 	text-transform: uppercase;
 	margin: 0;
-	padding: 15px 20px;
+	padding: 5px 15px;
 	border-left: solid 5px #795548;
+
+	font-family: roboto;
+	font-weight: 300;
+	font-size: 40px;
 }
 
 .post{
 	margin:20px 0; padding: 20px 20px;
 	// border:solid red 1px;
-
+	line-height: 1.5;
 	box-shadow: 1px 1px 10px 1px #ccc;
 }
 
@@ -139,25 +260,32 @@ h2.page__title{
 	padding:1px 20px 1px 20px;
 
 	margin-bottom: 20px;
+	line-height: 1.5;
 
 	font-size: 14px;
 
 
-h3 {
-	font-family: Cookie;
-}
+	h3 {
+		font-weight: 300;
+		font-size: 20px;
+		font-family: roboto;
+	}
+	
+	&__more{
+		border-top: 1px solid #aaa;
+		padding:10px 0;
+		text-align: right;
+	}
 
+}
 
 .page__footer{
 
 	text-align: center;
-
-	&--link, &--copyright{
-		// line-height: 100px;
-	}
+	background-image: url("../img/footer.png");
 
 	&--link{
-		background-color: rgba(45, 21, 12, 0.75);
+		// background-color: rgba(45, 21, 12, 0.75);
 		height:100px;
 		line-height: 100px;
 	}
@@ -165,9 +293,7 @@ h3 {
 	&--copyright{
 		height:50px;
 		line-height: 50px;
-		background-color: rgba(45, 21, 12, 9);
+		background-color: rgba(#777, 0.5);
 	}
-
-
 
 }
